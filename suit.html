@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Random Content</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-image: url("suits.jpg");
+        text-align: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        }     
+        .container {
+         padding: 20px;
+         padding-right: 20px;
+       
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 900px;
+        overflow-y: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-shadow: 1px 1px rgb(184, 18, 18);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+        }
+        .random-content {
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f9f9f9;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+            
+        }
+        .random-content h1{
+            text-shadow: 1px 1px rgb(184, 18, 18);
+            
+        }
+        .article {
+            margin-bottom: 30px;
+            padding: 20px;
+          background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+            color: black;
+            text-decoration: solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        video {
+            transform: rotate(-90deg); 
+            transform-origin: center center; 
+            height:500px;
+            width:700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div class="container" id="questionPage">
+        <h1 style="color: #D84040;">Answer this question if you think you're worthy to come here</h1>
+
+        <!-- Questions -->
+        <div class="question">
+            <label for="q1" >1. Who is Harvey Specter?</label><br>
+            <input type="text" id="q1" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q2">2. What is Mike Ross' secret?</label><br>
+            <input type="text" id="q2" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q3">3. Who is Donna Paulsen?</label><br>
+            <input type="text" id="q3" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q4">4. What is Rachel Zane's husband?</label><br>
+            <input type="text" id="q4" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q5">5. what is louis litt is good at?</label><br>
+            <input type="text" id="q5" placeholder="Your Response">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Message for Fail or Success -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <!-- Random Content Page (Hidden by default) -->
+    <div class="random-content" id="randomContentPage" style="display:none;">
+        <h1>Welcome to Random Content!</h1>
+
+        <div class="article">
+            <h2>Harvey Specter</h2>
+            <p>Harvey Reginald Specter, J.D. is a former corporate attorney, one of the name partners at Specter Litt Wheeler Williams, the managing partner of Specter Litt, and a former Assistant District Attorney for the New York County District Attorney's Office. He is also the husband of Donna Paulsen.</p>
+
+            <p>After being promoted to the position of senior partner at Pearson Hardman in 2011, he hired Mike Ross, a veritable genius with a photographic memory who was able to pass the bar exam despite not attending law school, as his associate, and became his mentor.</p>
+
+            <p>Harvey grew up in Riverside, New York. Harvey was 16 when he first caught his mother, Lily Specter, cheating on his father, Gordon Specter. Not wanting to hurt his father's feelings, Harvey did not tell him about it and watched his mother's indiscretions in silence for the next two years. Eventually, she left them. Jessica Pearson met Harvey while he was still working in the mailroom of Gordon Schmidt Van Dyke. Harvey had realized that an associate backdated a postage when he missed a filing, so he came into Jessica's office and told her that if the firm did not declare misconduct, he would report them to the D.A. Impressed, Jessica soon paid for Harvey to go to Harvard Law, where he "jerked off the entire time [he was] there". He also met Dana Scott, a rival at law and occasional lover.</p>
+        </div>
+
+        <div class="article">
+            <h2>Mike Ross</h2>
+         <P>"My whole life I have wanted to be a lawyer so that I could help people like Clifford Danner. People who have no one else to fight for them. No one who believes in them. But instead, all I've done as a lawyer is work night and day to put money into the hands of rich people. [...] And all I can say is that I promise you, whether these people find me innocent or not, I am gonna spend the rest of my life fighting for the Clifford Danners of this world. I will not waste that gift again. You could believe it or not, but I am a lawyer, and I always will be."
+            — Mike Ross</P>  
+
+         <P>Michael James "Mike" Ross is a former lawyer and junior partner at Specter Litt, a former legal consultant/supervisor at the Eastside Legal Clinic and a former investment banker at Sidwell Investment Group. He is the husband of Rachel Zane.</P>
+
+         <P>He was hired by Harvey Specter, a senior partner at Pearson Hardman, as an associate lawyer, despite Mike not having graduated college or having a law degree. Mike left Pearson Specter after accepting the job offer to work at SIG; however, he returns later in season 4 after Jonathan Sidwell fired him from his firm. Shortly after his return, Louis Litt discovered his fraud and leveraged it to become name partner, forming Pearson Specter Litt. After Jack Soloff and the other partners at PSL acknowledge Mike's worth to the firm, he is promoted from junior associate to junior partner.
+
+            He was arrested for conspiracy to commit fraud in the season 5 summer finale, and was involved in a trial against the U.S Attorney's Office for his illegal practicing of law. Although the verdict was not guilty, Mike plead guilty before the official verdict, and was incarcerated at the Federal Correctional Institution, Danbury in Connecticut. However, after being presented a deal by Sean Cahill, he helped keep Frank Gallo behind bars and have insider trader William Sutter arrested, and was freed from prison as a result.</P>
+        </div>
+
+        <div class="article">
+            <h2>Donna Paulsen</h2>
+            <p>Donna Roberta Paulsen is the former Chief Operating Officer of Specter Litt Wheeler Williams and the wife of Harvey Specter, having originally worked as his legal secretary for over twelve years</p>
+
+            <p>She briefly left him to work for Louis Litt. However, Louis fired her so that she could go back to work for Harvey. Wanting more out of her life, she convinced Harvey to promote her to senior partner despite her lack of legal knowledge or credentials, which Harvey agreed to as he believed the firm could not operate without her. However, Harvey was reminded by Katrina Bennett, Louis Litt and Jessica Pearson that partnership wasn't a title meant to be given to anyone, and was instead given the position of COO instead.</p>
+
+            <p>Donna, early in the series, is established as a sharp-witted woman, often holding her own against Harvey and dissing Louis when he advances on her. She is first seen helping Harvey with the associate recruitment. When Mike Ross barged in through the door while trying to dodge the police, she thought that he was the late applicant and let him in.</p>
+            <a href="Index.html" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Homepage</a>
+        </div>
+
+        
+       
+
+        <footer>
+            <p>&copy; 2025 Random Content Page | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script >
+        function checkAnswers() {
+            const correctAnswers = [
+                "lawyer",         
+                "imposter",  
+                "secretary",               
+                "mike ross",         
+                "numbers"        
+            ];
+
+            const answers = [
+                document.getElementById("q1").value.toLowerCase(),
+                document.getElementById("q2").value.toLowerCase(),
+                document.getElementById("q3").value.toLowerCase(),
+                document.getElementById("q4").value.toLowerCase(),
+                document.getElementById("q5").value.toLowerCase()
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+
+            if (correctCount >= 3) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "You passed! You can now access the page.";
+
+                document.getElementById("questionPage").style.display = "none";
+                document.getElementById("randomContentPage").style.display = "block";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "You failed! You answered less than 3 questions correctly.";
+            }
+        }
+    </script>
+
+</body>
+</html>

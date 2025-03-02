@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Random Content</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-image: url("friends.jpg");
+        text-align: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        }     
+        .container {
+         padding: 20px;
+         padding-right: 20px;
+       
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 900px;
+        overflow-y: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-shadow: 1px 1px rgb(184, 18, 18);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+        }
+        .random-content {
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f9f9f9;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+            
+        }
+        .random-content h1{
+            text-shadow: 1px 1px rgb(184, 18, 18);
+            
+        }
+        .article {
+            margin-bottom: 30px;
+            padding: 20px;
+          background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+            color: black;
+            text-decoration: solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        video {
+            transform: rotate(-90deg); 
+            transform-origin: center center; 
+            height:500px;
+            width:700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div class="container" id="questionPage">
+        <h1 style="color: #D84040;">Answer this question if you think you're worthy to come here</h1>
+
+        <!-- Questions -->
+        <div class="question">
+            <label for="q1" >1. Who is joey's roommate?</label><br>
+            <input type="text" id="q1" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q2">2. who is rachel' roommate?</label><br>
+            <input type="text" id="q2" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q3">3. who was the ex-lover of Ross?</label><br>
+            <input type="text" id="q3" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q4">4. Who is monica's brother?</label><br>
+            <input type="text" id="q4" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q5">5. For whom does chandlar will always have a room for?</label><br>
+            <input type="text" id="q5" placeholder="Your Response">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Message for Fail or Success -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <!-- Random Content Page (Hidden by default) -->
+    <div class="random-content" id="randomContentPage" style="display:none;">
+        <h1>Welcome to Random Content!</h1>
+
+        <div class="article">
+            <h2>Joey Tribbiani</h2>
+            <p>Joseph Francis "Joey" Tribbiani Jr., is one of the main characters on the popular sitcom Friends (1994–2004) and the title character in the spin-off Joey (2004-2006), portrayed by Matt LeBlanc. He is best known for being a ladies' man and having a rather silly but adorable personality. Joey's catchphrase is his main pick-up line "How you doin'?".</p>
+
+            <p>Joey is portrayed as promiscuous and dim-witted but good-natured, as well as very loyal, caring, and protective of his friends. He is a food-loving womanizer who has had more luck with dates than any of the other group members. In contrast to his persona as the "ladies' man", he has also known for his childish side. His best friend is Chandler Bing.</p>
+
+            <p>Joey Tribbiani comes from an Italian-American family of eight children, of which he is the only son of Joey Tribbiani Sr. and Gloria Tribbiani. He is from, and presumably born in, Queens. Joey has seven sisters: Gina Tribbiani, Tina Tribbiani, Dina Tribbiani, Mary-Angela Tribbiani, Mary-Therese Tribbiani, Veronica Tribbiani, and Cookie Tribbiani. His grandmother affectionately calls him, "my big fat Joey" telling the gang he weighed twenty-seven pounds at birth. Later Monica's Thanksgiving turkey is about nineteen pounds which Joey tells Rachel, "It's like me when I was born."</p>
+        </div>
+
+        <div class="article">
+            <h2>Chandler Bing</h2>
+         <P>Chandler Muriel Bing is one of the main characters on the popular sitcom Friends (1994–2004), portrayed by the late Matthew Perry. Chandler has a very good sense of humor, and is notoriously sarcastic, an attribute he calls a defense mechanism he developed due to his parents' divorcing when he was a child. His best friends are Joey Tribbiani and Ross Geller. Chandler has a habit of asking rhetorical questions that start with "Could it be any more...?" or something similar, such as "Could this be any more...?" or "Could she be any more...?".</P>  
+
+         <P>Chandler Muriel Bing is the only child of erotic fiction novelist Nora Tyler Bing and cross-dressing burlesque star Charles "Helena Handbasket" Bing, who performs his all-male burlesque show, 'Viva Las Gay-gas' in Las Vegas, where they live. At the age of 9 after just finishing Thanksgiving diner, his parents announced their divorce leaving him distraught and alarmed. Subsequently, he resorted to what he calls "a carefully regimented program" of denial, sarcasm, wetting the bed and smoking. He has claimed to have seen sexually provocative scenes since the age of 7 due to his parents' lack of awareness. Despite his forgiving nature he still holds a grudge against both of his parents for being absent-minded and not providing emotional support and tends to be bitter whenever talking about them.</P>
+
+         <P>Chandler was trying to get a new roommate after his old one Kip moved out when Joey Tribbiani applied, but Chandler passed him over. When his first choice was goaded into leaving by Mr. Heckles, an odd tenant in the same building, he was forced to accept Joey, but they soon became best friends.</P>
+        </div>
+
+        <div class="article">
+            <h2>Rachel Greene</h2>
+            <p>Rachel Karen Greene (see section Name) is one of the main characters on the classic sitcom Friends (1994–2004). She was played by Jennifer Aniston, who received an Emmy Award, Golden Globe and Screen Actors Guild Award for Outstanding Performance by a Female Actor in a Comedy Series for her performance. She is noted for her character arc from a spoiled rich daddy's girl to successful fashion executive who cares for her friends and her on-off again relationship with Ross is one of the central themes of the show. Her influence on 1990s style also made her a fashion icon.</p>
+
+            <p>Rachel Karen Greene was born to wealthy parents, Leonard and Sandra Greene, who gave her and her two sisters Jill and Amy a rather spoiled upbringing, resulting in them not being able to be independent from their parents financially at first. Rachel originally had a big nose but she later got a nose job. She met Monica Geller for the first time when they were both six years old. They quickly became best friends, remaining exactly like that from then, and the friendship flourished by attending the same high school. Rachel also soon met Monica's older brother, Ross, who developed a crush on her which he decided to keep to himself, although years later Rachel admitted she knew about his crush. Ross knew she would have rejected him and she did, as shown in the Pilot when Rachel thought he was just 'Monica's geeky older brother'.</p>
+
+            <p>During Thanksgiving of 1987, at Monica's house, Rachel arrives very distraught, and she tells Monica that Chip broke up with her for Nancy Branson, and she tells Monica that she is never going out with Chip again, no matter what. Rachel then goes on to say that she is done with high school boys in general, and that she is going to start dating men. Later on, Rachel excitedly tells Monica that Chip dumped Nancy, and that he wants to come over to her house tonight.</p>
+            <a href="Index.html" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Homepage</a>
+        </div>
+
+        
+       
+
+        <footer>
+            <p>&copy; 2025 Random Content Page | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script >
+        function checkAnswers() {
+            const correctAnswers = [
+                "chandler",         
+                "monica",  
+                "rachel",               
+                "ross",         
+                "joey"        
+            ];
+
+            const answers = [
+                document.getElementById("q1").value.toLowerCase(),
+                document.getElementById("q2").value.toLowerCase(),
+                document.getElementById("q3").value.toLowerCase(),
+                document.getElementById("q4").value.toLowerCase(),
+                document.getElementById("q5").value.toLowerCase()
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+
+            if (correctCount >= 3) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "You passed! You can now access the page.";
+
+                document.getElementById("questionPage").style.display = "none";
+                document.getElementById("randomContentPage").style.display = "block";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "You failed! You answered less than 3 questions correctly.";
+            }
+        }
+    </script>
+
+</body>
+</html>

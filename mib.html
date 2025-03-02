@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Random Content</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-image: url("mib.jpg");
+        text-align: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        }     
+        .container {
+         padding: 20px;
+         padding-right: 20px;
+       
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 900px;
+        overflow-y: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-shadow: 1px 1px rgb(184, 18, 18);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+        }
+        .random-content {
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f9f9f9;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+            
+        }
+        .random-content h1{
+            text-shadow: 1px 1px rgb(184, 18, 18);
+            
+        }
+        .article {
+            margin-bottom: 30px;
+            padding: 20px;
+          background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+            color: black;
+            text-decoration: solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        video {
+            transform: rotate(-90deg); 
+            transform-origin: center center; 
+            height:500px;
+            width:700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div class="container" id="questionPage">
+        <h1 style="color: #D84040;">Answer this question if you think you're worthy to come here</h1>
+
+        <!-- Questions -->
+        <div class="question">
+            <label for="q1" >1. Who is Agent J in Men in Black?</label><br>
+            <input type="text" id="q1" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q2">2. What is Agent K's real name?</label><br>
+            <input type="text" id="q2" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q3">3. What is the name of the alien antagonist in the first movie?</label><br>
+            <input type="text" id="q3" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q4">4. What is the device that can erase memories in the series?</label><br>
+            <input type="text" id="q4" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q5">5. Who plays the role of Agent J?</label><br>
+            <input type="text" id="q5" placeholder="Your Response">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Message for Fail or Success -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <!-- Random Content Page (Hidden by default) -->
+    <div class="random-content" id="randomContentPage" style="display:none;">
+        <h1>Welcome to Random Content!</h1>
+
+        <div class="article">
+            <h2>Agent J</h2>
+            <p>Agent J (usually called Jay), originally James Darrell Edwards III, was one of the two protagonists of the Men in Black film series. Agent J was an agent of the MiB, after being recruited by Agent K. He is energetic and attempts to bring life and emotion back to the bland organization. He is portrayed by Will Smith in the films and Men in Black: Alien Attack and is voiced by Keith Diamond in the animated series.</p>
+
+            <p>J's father, James Darrell Edwards Jr was killed at Cape Canaveral, Florida on July 16th, 1969, by Boris The Animal when assisting Agent K. Although James Darrell Edwards III was present at the scene of his father's death, he was neuralyzed by Agent K who, in the altered timeline, avenged his father's death by killing Boris the Animal. As a result, James was largely unaware of why his father was absent during the majority of his adolescent life, as he was only 3-years old at the time. The only memento J had of his father was his pocket watch. James then followed in his father's footsteps, and, years later, became a police officer. James would later joke about he would play catch with his father when he was a kid except he would throw the ball, and it would just hit the wall because he was never there.</p>
+
+            <p>On the night of May 17th, 1997, James chased down an extremely fast alien, disguised as a human. When he finally caught up in the roof of the Guggenheim museum, the unknown alien gave James a serious warning concerning the Earth, before jumping off a building. Sometime later James was interrogated by a fellow officer. Once this officer left the room, a man in a black suit Agent K walked in and explained to Edwards that the human he had chased down was really an alien in disguise.</p>
+        </div>
+
+        <div class="article">
+            <h2>Agent K</h2>
+         <P>Agent K, originally Kevin Brown (born c. 1940),[1] was one of the main protagonists of the Men in Black film series. Kay is portrayed by Tommy Lee Jones and Josh Brolin in the films, and is voiced by Ed O'Ross in season 1 of the animated series, and by Gregg Berger in the remaining seasons.
+
+            A top agent and a founder of the Men in Black, he is a character who is extremely respected, and after working at MiB for over 40 years, he's very stoic and shows nearly no emotion. He was hailed by several as the "Greatest Agent in MIB history."</P>  
+
+         <P>Originally Kevin Brown, he helped establish the earliest foundations of MIB, which the government created in the mid-1950s. In his youth before MIB, Kevin's hometown was Truro, Massachusetts and he at times played a game with his father, in which they surmised what they could eat as a "last meal." Kay was also close to his grandfather, who passed on the wisdom to have pie to clear his mind so thoughts could flow more clearly and allow him to deduce his next step when confused about how to proceed.
+
+            It was not until March 2, 1961, that contact with alien lifeforms known as the Baltians was made outside New York City. K claimed to have been a "one dumb kid" who got lost on the wrong back road and ended up presenting the flowers to one of the spacemen, originally meant for his girlfriend. After this, Kay became fully devoted to his work. After joining the MIB he left behind his, soon to be, wife (Elizabeth Ann Reston) in the process, and a "coma" was utilized as his cover story upon his initiation.</P>
+
+         <P>K was trained by MIB Director Alpha to be an MIB agent. However, Alpha stole a Cosmic Integrator and went rogue leaving K for dead after shooting him. K did not want to betray MIB as if he did, he would reject everything Alpha taught him. At some point, he was made partner with another founder, Dee. In 1968, K was instrumental in the event known as the Zeronion Migration, which can only be assumed to be an unusual experience. During the mid-1960s, K was assigned to keep tabs on an alien band member, Mick Jagger, thought to have been on earth to breed with humans, in London. This was there he met fellow agent O, where the two spent time together at a bar, and its implied they were intimate with each other for a brief period.</P>
+        </div>
+
+        <div class="article">
+            <h2>Griffin</h2>
+            <p>Griffin was the last member of the Archanan race, therefore the last who has the unique ability to foresee the infinite potential outcomes that are dependent on the actions taken in any given scenario. He is also the sole possessor of the Arc Net Shield, which Kay requires to prevent the Boglodite invasion of Earth in 2012. Griffin is portrayed by Michael Stuhlbarg.</p>
+
+            <p>Griffin hailed from the planet Archanan, which was destroyed by Boglodites. However, Griffin was in possession of the Arc Net Shield and he was forced to take refuge on Earth, which was the next target of the parasitic race.
+
+                n 1969, Griffin inadvertently meets with Agent K and Agent J at Agent W's apartment. He astonishes J with his extensive knowledge of future events. However, when Boris The Animal arrives on the scene, which Griffin correctly predicts, he flees immediately. Before he leaves, Griffin imparts to K and J that he will give them the item that they require most if they meet again.
+
+When they find Griffin again at Shea Stadium, he reveals how he sees the future by displaying the World Series taking place three months in the future. He says that it is his favorite moment in human history.</p>
+
+            <p>After handing K the Arc Net Shield to be placed on the Apollo 11 rocket, he voices on how he wants them to prevent the destruction of their planet. However, he realizes that he failed to anticipate Boris' arrival, who snatches him via motorcycle. After a brief chase on vertical cycles, the MIB agents manage to recapture Griffin and elude Boris. When J asks Griffin if he can prevent K from being killed by Boris, Griffin says he can, but warns that in either possibility, someone will be killed.
+
+                The MIB agents then escort Griffin back to the Headquarters, wherein they use jetpacks to travel to Florida to intercept the impending launch. However, they are impeded by several military officers on patrol, but Griffin manages to convince the colonel to assist them by showing him the future and how J and K are important to it though exactly what he showed him to display this is unknown. Griffin then refuses to progress with K and J, imparting that time will be repaired once Boris loses his arm and K will never know J was there. After J is out of earshot, Griffin somberly states that "I can never bear to watch this part."
+                <br>
+                2012<br>
+                With the timeline restored, Griffin is once again seen in the diner with J and K, who are seemingly still friends with him on the new future. He then refers to the audience stating that everything turned out alright and says that this is his new favorite moment in human history. However, Griffin quickly predicts a reality of an impending asteroid collision with the Earth because K forgot to leave a tip for the waiter. The crisis is averted when K returns and notes to Griffin on how he nearly forgot and leaves some money on the bench, as a satellite diverts the asteroid's path, thus sparing the Earth. Soon after that, Griffin lets out a sigh of relief, remarking, "That was a close one."</p>
+                <a href="Index.html" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Homepage</a>
+        </div>
+
+        
+       
+
+        <footer>
+            <p>&copy; 2025 Random Content Page | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script >
+        function checkAnswers() {
+            const correctAnswers = [
+                "will",         
+                "kay",  
+                "edger",               
+                "neuralyzer",         
+                "smith"        
+            ];
+
+            const answers = [
+                document.getElementById("q1").value.toLowerCase(),
+                document.getElementById("q2").value.toLowerCase(),
+                document.getElementById("q3").value.toLowerCase(),
+                document.getElementById("q4").value.toLowerCase(),
+                document.getElementById("q5").value.toLowerCase()
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+
+            if (correctCount >= 3) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "You passed! You can now access the page.";
+
+                document.getElementById("questionPage").style.display = "none";
+                document.getElementById("randomContentPage").style.display = "block";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "You failed! You answered less than 3 questions correctly.";
+            }
+        }
+    </script>
+
+</body>
+</html>

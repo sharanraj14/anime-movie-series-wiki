@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Random Content</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-image: url("viking.jpg");
+        text-align: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        }     
+        .container {
+         padding: 20px;
+         padding-right: 20px;
+       
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 900px;
+        overflow-y: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-shadow: 1px 1px rgb(184, 18, 18);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+        }
+        .random-content {
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f9f9f9;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+            
+        }
+        .random-content h1{
+            text-shadow: 1px 1px rgb(184, 18, 18);
+            
+        }
+        .article {
+            margin-bottom: 30px;
+            padding: 20px;
+          background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+            color: black;
+            text-decoration: solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        video {
+            transform: rotate(-90deg); 
+            transform-origin: center center; 
+            height:500px;
+            width:700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div class="container" id="questionPage">
+        <h1 style="color: #D84040;">Answer this question if you think you're worthy to come here</h1>
+
+        <!-- Questions -->
+        <div class="question">
+            <label for="q1" >1. Who is Ragnar Lothbrok??</label><br>
+            <input type="text" id="q1" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q2">2. What is Lagertha known for?</label><br>
+            <input type="text" id="q2" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q3">3. What does Valhalla represent in Viking mythology?</label><br>
+            <input type="text" id="q3" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q4">4. What is Ivar the Boneless' nickname?</label><br>
+            <input type="text" id="q4" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q5">5. Who is Athelstan in the series?</label><br>
+            <input type="text" id="q5" placeholder="Your Response">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Message for Fail or Success -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <!-- Random Content Page (Hidden by default) -->
+    <div class="random-content" id="randomContentPage" style="display:none;">
+        <h1>Welcome to Random Content!</h1>
+
+        <div class="article">
+            <h2>Bjorn</h2>
+            <p>Björn is a twelve-year-old boy who lives on a small farm in a village outside Kattegat with his father Ragnar, his mother Lagertha, and his eleven-year-old sister Gyda.
+
+                When Ragnar returns home from raiding in the Eastern Balts, Björn is ecstatic and rushes to give him a hug. The family celebrates his safe return home. Ragnar informs the family that he will take Björn to Kattegat to attend the Thing so that he can receive his arm ring, which will mark him as a man in Viking society. Lagertha tries to convince Ragnar that Björn is still too young, but Ragnar insists. Björn is happy with this outcome as he has yearned to be a warrior like his father, and is desperate for recognition and to fight in the raids alongside Ragnar.</p>
+
+            <p>Upon their return to Kattegat, Björn told Lagertha of Aslaug and his father's infidelity, though he did not say much out of loyalty to Ragnar. When Lagertha decided to leave Ragnar, Björn was torn. Though he initially decided to stay with Ragnar, through Torstein's urging, Björn eventually decided to go with his mother. Ragnar let them, telling Björn to look after his mother.
+
+                Even years after their departure, Ragnar continued to think of them. When he met with the Seer, the oracle told him that he had foreseen that his sons would become famous, possibly even more than him. His son, the Seer said, would marry the daughter of a king, or would sail across a sea without tides. Ragnar asked about Björn, whether he still lived, and whether he would ever see him again. The Seer told him that it was Björn about whom he had prophesied.</p>
+
+            <p>Björn was surprised when Þórunn told him that she was pregnant. After the battle of Mercia, he asked Þórunn to marry him and she said yes. He looked after her when her face was badly scarred in battle. Later, she gave birth to their child: a daughter they named Siggy. Björn sleeps with Torvi, Erlendur's wife, when Þorunn rejects his attempts to have sex with her and tells him to find someone else to be with, due to her feeling self conscious about her nasty scar. Bjorn strikes up a conversation with Torvi, who looks quite smitten by Bjorn and gives her a drink and asking that her husband is coming to Paris when Torvi says she is coming as well, Bjorn notes that she has courage. Bjorn later leaves the party and sits out on the beach depressed when Torvi goes to join him. Although he initially refused, right before he has sex with Torvi, he tells her that he loves his wife right before they have passionate sex on the beach. He later finds Torvi and apologizes for taking advantage of her, and hands her a bracelet as a gift. She tells him that she's neither with child or a child herself, and apologizes too for taking advantage of him. It also becomes apparent that Torvi and Bjorn are starting to fall in love with each other, much to Erlendur's fury. </p>
+        </div>
+
+        <div class="article">
+            <h2>Ragnar</h2>
+         <P>It gladdens me to know that Odin prepares for a feast! Soon I shall be drinking ale from curved horns. This hero that comes into Valhalla does not lament his death. I shall not enter Odin’s hall with fear. There, I shall wait for my sons to join me. And when they do, I will bask in their tales of triumph. The Aesir will welcome me. My death comes without apology. And I welcome the Valkyries to summon me home!	”
+            - Ragnar to King </P>  
+
+         <P>Ragnar "Lothbrok" Sigurdsson (Old Norse: Ragnarr Loðbrók, Ragnar means "keeper of the fort" and Lothbrok means "shaggy breeches") is a Viking farmer and warrior who yearns to raid the rumored riches of undiscovered England. His first wife is Lagertha, and they have two children named Gyda and Bjorn. His second wife is Aslaug, and they have four sons named Ubbe, Hvitserk, Sigurd, and Ivar. Ragnar is the younger brother of Rollo. He becomes King of Kattegat.</P>
+
+         <P>According to the Seer, Ragnar was born and raised in the lands near Kattegat, in southern Norway, and earned a reputation as a clever boy. When Ragnar was fifteen, King Froh of Svealand invaded Norway and killed the Norwegian King Siward. Ragnar joined with Siward-loyalists to drive out Froh. King Froh was famous for carrying tame serpents around his neck in battle who would bite his enemies while he fought them. For the purpose of fighting Froh, Ragnar fashioned a coat and breeches from a hairy animal hide. In the battle that followed, Ragnar faced off with Froh and the serpents could not bite through the hide because of all the hair. Thus, Ragnar earned his name "Lothbrok," which means "the hairy-breeches."
+
+            At one point, Ragnar went to Lagertha's home to confess his love to her, but he was set upon by a bear and an enormous hound who guarded her home. Ragnar killed the bear with his spear and strangled the hound with his bare hands, thus gaining Lagertha's hand in marriage. The Seer had prophesied that Ragnar will have many sons. Bjorn is the first of these.</P>
+        </div>
+
+        <div class="article">
+            <h2>Lagertha</h2>
+            <p>My son didn't brand you for being loyal to Ivar! He branded you for being disloyal to Ragnar, and everything Ragnar stood for! And if I have to die for what Ragnar and I believed in, it is worth it.	”
+                -Lagertha to White Hair, Death and the Serpent
+                
+                Lagertha is the first and former wife of Ragnar Lothbrok and the former Queen of Kattegat. She is the mother of Björn and Gyda. Lagertha was an Earl and a fierce shield-maiden.</p>
+
+            <p>Lagertha was brought up by her father to be a shield-maiden. At an unspecified time, Ragnar went to Lagertha's home to confess his love for her, but he was set upon by a bear and an enormous hound who guarded her home. Ragnar killed the bear with his spear and strangled the hound with his bare hands, thus gaining her hand in marriage. It is unknown whether Ragnar's story is real or a child-friendly tale to his son Björn referencing his battle with Rollo, who was known as a "bear", over Lagertha's love, as Lagertha also had a relationship with Rollo and is unsure who Björn's biological father is.</p>
+            <a href="Index.html" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Homepage</a>
+        </div>
+
+        
+       
+
+        <footer>
+            <p>&copy; 2025 Random Content Page | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script >
+        function checkAnswers() {
+            const correctAnswers = [
+                "king",         
+                "shieldmaiden",  
+                "afterlife",               
+                "boneless",         
+                "monk"        
+            ];
+
+            const answers = [
+                document.getElementById("q1").value.toLowerCase(),
+                document.getElementById("q2").value.toLowerCase(),
+                document.getElementById("q3").value.toLowerCase(),
+                document.getElementById("q4").value.toLowerCase(),
+                document.getElementById("q5").value.toLowerCase()
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+
+            if (correctCount >= 3) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "You passed! You can now access the page.";
+
+                document.getElementById("questionPage").style.display = "none";
+                document.getElementById("randomContentPage").style.display = "block";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "You failed! You answered less than 3 questions correctly.";
+            }
+        }
+    </script>
+
+</body>
+</html>

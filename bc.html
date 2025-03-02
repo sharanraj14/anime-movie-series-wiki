@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Random Content</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-image: url("asta.jpg");
+        text-align: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }     
+        .container {
+         padding: 20px;
+         padding-right: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 900px;
+        overflow-y: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-shadow: 1px 1px rgb(184, 18, 18);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+        }
+        .random-content {
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f9f9f9;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+          
+        }
+        .random-content h1{
+            text-shadow: 1px 1px rgb(184, 18, 18);
+            
+        }
+        .article {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        video {
+            transform: rotate(-90deg); 
+            transform-origin: center center; 
+            height:500px;
+            width:700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div class="container" id="questionPage">
+        <h1 style="color: #D84040;">Answer this question if you think you're worthy to come here</h1>
+
+        <!-- Questions -->
+        <div class="question">
+            <label for="q1" >1. Are Asta and Yuno blood relatives?</label><br>
+            <input type="text" id="q1" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q2">2. How many clovers are there in Asta's grimoire?</label><br>
+            <input type="text" id="q2" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q3">3. What is the power of the Wizard King?</label><br>
+            <input type="text" id="q3" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q4">4. What is the name of Yuno's spirit?</label><br>
+            <input type="text" id="q4" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q5">5. Does the Black Bulls have a vice captain?</label><br>
+            <input type="text" id="q5" placeholder="Your Response">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Message for Fail or Success -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <!-- Random Content Page (Hidden by default) -->
+    <div class="random-content" id="randomContentPage" style="display:none;">
+        <h1>Welcome to Random Content!</h1>
+
+        <div class="article">
+            <h2>Asta</h2>
+            <h3>Appearance</h3>
+            <p>Asta is a young man of short stature with an exceptionally muscular build. He has green eyes and messy, ash-blond hair with bangs in front of his forehead and a single strand protruding upwards from the center of his head...</p>
+
+            <h3>Personality</h3>
+            <p>Asta generally is cheerful and hyperactive. He tends to shout to express his thoughts and goals, much to the annoyance of some of those around him, and often in spite of other people's opinions. One of the first examples of this is when he conveyed his goal of becoming a Wizard King during the Magic Knights entrance exam...</p>
+        </div>
+
+        <div class="article">
+            <h2>Yuno</h2>
+            <h3>Appearance</h3>
+            <p>Yuno is a young man of average height with messy black hair, gold eyes and a lean build. He is often described and seen by others as a "handsome and good-looking guy" with Asta nicknaming him "pretty jerk" and once called so by Yami Sukehiro...</p>
+
+            <h3>Personality</h3>
+            <p>Yuno has a calm and emotionless demeanor and speaks only when he really needs to convey his thoughts. His manner of speaking often makes people misinterpret what he means. Despite his detached nature, Yuno harbors a strong ambition to be the Wizard King...</p>
+        </div>
+
+        <div class="article">
+            <h2>Black Bulls</h2>
+            <h3>Overview</h3>
+            <p>Like the other eight squads, Black Bull follows the orders of the Wizard King and will act according to his requests. All squads, including the Black Bull, perform missions all around the Clover Kingdom whether they are official or unofficial...</p>
+
+            <h3>Members</h3>
+            <p>Black Bull is led by Yami Sukehiro, a captain who has the duty to delegate missions, relay messages received from the Wizard King, and distribute the members' salaries. Additionally, the captain decides whether a mage is to be accepted into the ranks of the squad...</p>
+            <a href="Index.html" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Homepage</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Random Content Page | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script >
+        function checkAnswers() {
+            const correctAnswers = [
+                "no",         
+                "5",  
+                "time",               
+                "sylph",         
+                "yes"        
+            ];
+
+            const answers = [
+                document.getElementById("q1").value.toLowerCase(),
+                document.getElementById("q2").value.toLowerCase(),
+                document.getElementById("q3").value.toLowerCase(),
+                document.getElementById("q4").value.toLowerCase(),
+                document.getElementById("q5").value.toLowerCase()
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+
+            if (correctCount >= 3) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "You passed! You can now access the page.";
+
+                document.getElementById("questionPage").style.display = "none";
+                document.getElementById("randomContentPage").style.display = "block";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "You failed! You answered less than 3 questions correctly.";
+            }
+        }
+    </script>
+
+</body>
+</html>

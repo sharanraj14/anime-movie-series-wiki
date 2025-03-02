@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Random Content</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-image: url("inter.jpg");
+        text-align: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        }     
+        .container {
+         padding: 20px;
+         padding-right: 20px;
+       
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 900px;
+        overflow-y: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-shadow: 1px 1px rgb(184, 18, 18);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+        }
+        .random-content {
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f9f9f9;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+            
+        }
+        .random-content h1{
+            text-shadow: 1px 1px rgb(184, 18, 18);
+            
+        }
+        .article {
+            margin-bottom: 30px;
+            padding: 20px;
+          background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+            color: black;
+            text-decoration: solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        video {
+            transform: rotate(-90deg); 
+            transform-origin: center center; 
+            height:500px;
+            width:700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div class="container" id="questionPage">
+        <h1 style="color: #D84040;">Answer this question if you think you're worthy to come here</h1>
+
+        <!-- Questions -->
+        <div class="question">
+            <label for="q1" >1. Who is the main protagonist in Interstellar?</label><br>
+            <input type="text" id="q1" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q2">2. What is the name of the planet with the massive waves?</label><br>
+            <input type="text" id="q2" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q3">3. What is the name of the black hole in the movie?</label><br>
+            <input type="text" id="q3" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q4">4. Who plays the role of Dr. Brand?</label><br>
+            <input type="text" id="q4" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q5">5. What is the concept explored through the wormhole?</label><br>
+            <input type="text" id="q5" placeholder="Your Response">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Message for Fail or Success -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <!-- Random Content Page (Hidden by default) -->
+    <div class="random-content" id="randomContentPage" style="display:none;">
+        <h1>Welcome to Random Content!</h1>
+
+        <div class="article">
+            <h2>Miller's Planet</h2>
+            <p>Miller's planet is a waterworld, covered in a seemingly endless, shallow ocean. The planet's gravity is described to be "punishing" at 130% of Earth's, forcing human astronauts to move slowly and with some difficulty while on its surface. Time on the surface of Miller's planet passes very slowly relative to the time experienced by Romilly and that experienced on Earth. Romilly calculated that a single hour on Miller's Planet would equate to seven years back on Earth. Because of the planet's proximity to Gargantua, the immense gravity of the black hole causes the planet to be roiled by massive tidal waves as tall as 4,000 feet. There is no sign of dry land on Miller, which may not exist because of the sheer volume of water on the planet.</p>
+
+            <p>Dr. Amelia Brand describes the planet as "sterile" in accordance with the data findings of Dr. Laura Miller. The ocean was described to smell like distilled water poured on hot rocks - a mineral scent, but not like salt water. [1] The waves and shallow, sterile oceans would not support an environment capable of harboring advanced life (much less a civilization). It is also possible that the ocean's mineral content would fail to suit microbes and other simple lifeforms, despite the presence of necessary hydrocarbons, water, and starlight. A third reason for the term "sterile" may be that the planet simply did not exist long enough to develop life.</p>
+
+            <p>Despite the immense tidal wave, Doyle may have survived the encounter, but knocked unconscious, given that his spacesuit appeared undamaged. Even if a rescue team from Cooper Station were launched to Miller (and if the time dilation factor is exactly 1 hour per 7 years), around 9 hours would have passed for Doyle, but 64 years would've passed for everyone else. But if Doyle did survive and was rescued, he would suffer future shock given that it would have been a total of 65+ years that transpired while he was on Miller's planet. In a period of 9 hours, Doyle would certainly encounter many incoming waves before a rescue craft could find him, greatly reducing his chances for survival.</p>
+        </div>
+
+        <div class="article">
+            <h2>Wolf Edmunds</h2>
+         <P>Dr. Wolf Edmunds was a particle physicist and astronaut for the Lazarus missions. The desert planet that he arrived on would later become named after him.</P>  
+
+         <P>Dr. Wolf Edmunds was one of the twelve Lazarus missions scientists who volunteered to assess a potentially habitable planet beyond the wormhole. Before he left Earth, he and Amelia Brand had developed strong feelings for each other. Years after their separation, Brand's feelings for Edmunds would remain an influence in her life and would factor into the decision for the Endurance to visit Mann's planet instead of Edmunds. Brand's preference to visit Edmunds was not thought to be objective when both planets appeared to be equally viable. After crossing the wormhole, Edmunds landed on a desert world that was part of Pantagruel-Gargantua system. After finding his planet's conditions to be promising for human life, Edmunds sent a "thumbs up" signal back to NASA on Earth. He subsequently settled into hypersleep and awaited to be rescued. During this time, a rockslide occurred and destroyed his landing pod, causing Edmunds' death. As a result, the beacon that Edmunds activated had stopped transmitting three years before the Endurance crossed the wormhole.</P>
+
+         <P>After a disastrous mission on Mann's planet, the remains of the Endurance along with Brand and CASE are sent to Edmunds as the Endurance's last hope to find humanity's new home. Upon Brand and CASE's arrival, they find Edmunds' destroyed landing pod and bury him before initiating Plan B to colonize the planet.</P>
+        </div>
+
+        <div class="article">
+            <h2>Gargantua</h2>
+            <p>Gargantua is a very massive, rapidly spinning black hole. It is orbited by the planets Miller and Mann, as well as an unnamed neutron star. A main sequence star Pantagruel was located within a year's flight of Gargantua along with the habitable planet Edmunds. Gargantua is within a several week spaceflight of the Wormhole.</p>
+
+            <p>One of the first discoveries by NASA after sending initial probes through the Wormhole was likely Gargantua. The Lazarus Missions engaged in very little study of Gargantua, but NASA's interstellar relay determined its gravitational influence on its planetary system.
+
+                The black hole Gargantua was used for a powered slingshot maneuver to facilitate Brand's arrival on Edmunds' planet, as the Endurance did not have enough fuel to reach Edmunds on its own. Gargantua also transported Cooper and TARS to the tesseract, allowing them see the black hole's singularity and relay the quantum data to Cooper's daughter via morse code. Presumably, Gargantua is in or near to the center of the galaxy for which it resides. Due to the presence of large amounts of neutron stars and IMBHs (intermediate mass black holes) it could possibly be the super-massive black hole of the home galaxy.</p>
+
+            <p>By calculations of Kip Thorne, Gargantua is about 100 million solar masses, placing it firmly as a supermassive black hole. Furthermore, it is an edge case in that it's somehow spun up to maximum minus 0.00000000000001 of the maximum, dragging space around it as it did so. Several of the visual effects were toned down severely from what it would actually look like; the event horizon would be warped and red and blue shifted. Miller's planet would have been under the level of the accretion disk and the event horizon would have covered 40% of the visible sky. By those same calculations, orbital transfers to Miller's would likely require slingshot maneuvers around intermediate mass black holes at both the start of maneuvers and at the end, as the energy requirements seemingly preclude other methods of getting the required energy. Partially alluded to in movie by the short reference to a neutron star being useful for slingshot maneuvers.</p>
+            <a href="Index.html" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Homepage</a>
+        </div>
+
+        
+       
+
+        <footer>
+            <p>&copy; 2025 Random Content Page | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script >
+        function checkAnswers() {
+            const correctAnswers = [
+                "cooper",         
+                "miller",  
+                "gargantua",               
+                "hathaway",         
+                "tesseract"        
+            ];
+
+            const answers = [
+                document.getElementById("q1").value.toLowerCase(),
+                document.getElementById("q2").value.toLowerCase(),
+                document.getElementById("q3").value.toLowerCase(),
+                document.getElementById("q4").value.toLowerCase(),
+                document.getElementById("q5").value.toLowerCase()
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+
+            if (correctCount >= 3) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "You passed! You can now access the page.";
+
+                document.getElementById("questionPage").style.display = "none";
+                document.getElementById("randomContentPage").style.display = "block";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "You failed! You answered less than 3 questions correctly.";
+            }
+        }
+    </script>
+
+</body>
+</html>

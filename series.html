@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("body back.jpg");
+            background-attachment: fixed; 
+            background-size: cover;
+        }
+        
+        /* Navbar styles */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Ensures navbar stays on top */
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Centering the product images */
+        .product-slider {
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+                     
+            margin-top: 80px;        
+            gap: 20px;               
+        }
+
+        .product-images img {
+            height: 400px; /* Increased height for images */
+            width: auto;   /* Maintain aspect ratio */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+            transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+        }
+
+        .product-images img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }       
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            height: 400px; /* Increased height */
+            width: 250px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 100px; 
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Homepage</a>
+        <a href="anime.html">Anime</a>
+        <a href="movie.html">Series</a>
+        <a href="series.html">Movies</a>
+    </nav>
+
+    <h1>Series</h1>
+    <div class="product-slider">
+        <div class="product-images">
+          <a href="friends.html">  <img src="friends.jpg" alt="Product 1"></a>
+          <a href="got.html">  <img src="got.jpg" alt="Product 2"></a>
+          <a href="viki.html">  <img src="viking.jpg" alt="Product 3"></a>
+           <a href="suit.html"> <img src="suits.jpg" alt="Product 4"></a>
+        </div>
+    </div>
+
+   
+    <footer>
+        <p>
+            <a href="cont.html">Contact Us</a> | 
+            <a href="about.html">About Us</a> | 
+            <span>&copy; 2025 Your Website</span>
+        </p>
+    </footer>
+
+</body>
+</html>

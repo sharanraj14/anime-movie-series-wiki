@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Random Content</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-image: url("l yagami.jpg");
+        text-align: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        }     
+        .container {
+         padding: 20px;
+         padding-right: 20px;
+       
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 900px;
+        overflow-y: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-shadow: 1px 1px rgb(184, 18, 18);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+        }
+        .random-content {
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f9f9f9;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+            
+        }
+        .random-content h1{
+            text-shadow: 1px 1px rgb(184, 18, 18);
+            
+        }
+        .article {
+            margin-bottom: 30px;
+            padding: 20px;
+          background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+            color: black;
+            text-decoration: solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        video {
+            transform: rotate(-90deg); 
+            transform-origin: center center; 
+            height:500px;
+            width:700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div class="container" id="questionPage">
+        <h1 style="color: #D84040;">Answer this question if you think you're worthy to come here</h1>
+
+        <!-- Questions -->
+        <div class="question">
+            <label for="q1" >1. How many death note does ryuk has?</label><br>
+            <input type="text" id="q1" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q2">2. Ryuk's favourite food?</label><br>
+            <input type="text" id="q2" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q3">3. How many shingami's were present in mortal world during the show?</label><br>
+            <input type="text" id="q3" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q4">4. can shinigami can see how many years are left for motals to live?</label><br>
+            <input type="text" id="q4" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q5">5. Does light successfully kill's L?</label><br>
+            <input type="text" id="q5" placeholder="Your Response">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Message for Fail or Success -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <!-- Random Content Page (Hidden by default) -->
+    <div class="random-content" id="randomContentPage" style="display:none;">
+        <h1>Welcome to Random Content!</h1>
+
+        <div class="article">
+            <h2>Light Yagami</h2>
+            <p>Light Yagami (夜神月, Yagami Raito) is the main protagonist of the Death Note series. After discovering the Death Note, he decides to use it to rid the world of criminals. His killings are eventually labelled by the people living in Japan as the work of "Kira."</p>
+
+            <p>Light is characterized as hardworking, talented, and a natural genius. Highly perceptive and good with problem-solving skills, Light is a skilled planner and good at mapping out scenarios. Furthermore, Light is very popular among his peers and adored by his family members. However, his high intelligence, academic achievements, and constant praise from adults laid the foundation for an innate hubris and arrogance that quickly escalated after he adopted the role of Kira. Light also struggled with a feeling of boredom that was quelled once he began using the notebook.</p>
+
+            <p>Through the use of the Death Note, Light quickly begins to develop a cold and ruthless nature. As a utilitarian, he will use any means necessary to achieve his goals and ambitions. However, though his actions do put his family in harm’s way, he continues to show love and genuine concern for them. This is demonstrated when his sister Sayu is kidnapped and held for ransom. Light prevents Soichiro from taking drastic action in order to keep Sayu safe, in spite of knowingly increasing Mello's chances of obtaining the Death Note.</p>
+        </div>
+
+        <div class="article">
+            <h2>Ryuk</h2>
+         <P>Ryuk (リューク, Ryūku) is a Shinigami who, after becoming bored with the Shinigami Realm, steals a second Death Note and drops it into the Human World. This Death Note is discovered by Light Yagami who uses it in an attempt to cleanse the world of evil and injustice. This leads to Light's conflict with L, Near and Mello, thus satisfying Ryuk's need for entertainment.</P>  
+
+         <P>Ryuk is different from most Shinigami in that he does not want to simply pass time away in the Shinigami Realm but find something to relieve his boredom, and he is unaffected by the mocking he receives from other Shinigami for it.</P>
+
+         <P>Ryuk regards Light as "interesting," specifically due to his experiments and the loopholes he discovers regarding the Death Note's rules and instructions, occasionally discovering abilities of the notebook even Ryuk did not know existed. Though he finds Light interesting, he does not care whether Light lives or dies and does not actively assist him. At times, he withholds important information from Light and only assists him when he has something to gain from it. As his only purpose in dropping the notebook was because he was bored, most of his actions are primarily motivated by wanting to see something interesting, as he sees Light's use of the Death Note and the way humans react to it as truly entertaining. Ryuk is intelligent, but Light's ability to understand his desires easily makes him able to be manipulated.</P>
+
+         <p>Ryuk has a great fondness for apples, stating the addiction to be an equivalent of cigarettes and alcohol for humans. Shinigami apples are withered and taste like sand, as he shows Misa at one point, which is why he prefers apples from the human world. He suffers certain symptoms of withdrawal if he goes too long without eating them, involving twisting himself up like a pretzel and doing handstands. He also states that he is shy around girls, revealed when Misa regains her memories and hugs Ryuk in excitement.
+
+            Ryuk is fond of video games, first shown in the omake eight-panel comic series, where he asks Light for a Silver Game Boy Advance SP for Christmas.[3] On another occasion, Ryuk asks Light if he wants to play Mario Golf (changed to "video games" in the anime), but receives no answer, since Light's bedroom is bugged with microphones and rigged with cameras.</p>
+        </div>
+
+        <div class="article">
+            <h2>L("one")</h2>
+            <p>L (エル, Eru) is a world-renowned detective who takes on the challenge of catching the mass murderer known as Kira. In his investigation, L becomes suspicious of Light Yagami and makes it his goal to prove that Light is Kira.</p>
+
+            <p>L is quite secretive, and only communicates with the world through his assistant, Watari. He never shows his face to the world in person, instead representing himself with a capital letter L drawn in "Old English MT" or "Cloister Black" typeface. It is more likely to be "Cloister Black" as Watari's "W" is different in "Old English MT."</p>
+
+            <p>L is very intelligent, though his disheveled and languid appearance masks his great powers of deduction and many question his abilities upon viewing him. L tends to second-guess everything he is presented with, and is extremely meticulous and analytical. He is good at deceiving his opponents, and is willing to take drastic measures to solve a case. Some of his tactics are quite bold, such as having death row inmate Lind L. Tailor pose as himself on live TV in order to draw out Kira, while others seem bizarre to those involved, such as handcuffing himself to suspected-Kira, Light Yagami. He is also shown to have a dry sense of humor, and he isn't above making sarcastic remarks to people. Although he tends to be polite, to some (such as Task Force member Shuichi Aizawa), L can seem condescending at times.</p>
+            <p>Using subterfuge, misinformation, disinformation, and an analytical knowledge of human nature to help lure a suspected murderer into a false sense of security and possibly make him carelessly over-confident, L sometimes gets what he wants through abnormal or possibly criminal channels. Whenever L gives percentages to indicate how much he suspects a person of committing a crime, such as "five percent," he may in fact be over ninety percent convinced of their culpability. Although L tells Light that he is among the least likely suspects with one of the lowest percentages of probability, in reality, L is "pretty certain" that Light is Kira. As series writer Tsugumi Ohba said laughing, making light of L's tactics: "The truth is, he's a liar."</p>
+            <a href="Index.html" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Homepage</a>
+        </div>
+
+        
+       
+
+        <footer>
+            <p>&copy; 2025 Random Content Page | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script >
+        function checkAnswers() {
+            const correctAnswers = [
+                "2",         
+                "apple",  
+                "2",               
+                "yes",         
+                "yes"        
+            ];
+
+            const answers = [
+                document.getElementById("q1").value.toLowerCase(),
+                document.getElementById("q2").value.toLowerCase(),
+                document.getElementById("q3").value.toLowerCase(),
+                document.getElementById("q4").value.toLowerCase(),
+                document.getElementById("q5").value.toLowerCase()
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+
+            if (correctCount >= 3) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "You passed! You can now access the page.";
+
+                document.getElementById("questionPage").style.display = "none";
+                document.getElementById("randomContentPage").style.display = "block";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "You failed! You answered less than 3 questions correctly.";
+            }
+        }
+    </script>
+
+</body>
+</html>

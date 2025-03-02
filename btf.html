@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Random Content</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background-image: url("btf.jpg");
+        text-align: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        }     
+        .container {
+         padding: 20px;
+         padding-right: 20px;
+       
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 900px;
+        overflow-y: auto; 
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-shadow: 1px 1px rgb(184, 18, 18);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #575757;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+        }
+        .random-content {
+            padding: 20px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f9f9f9;
+
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+            
+        }
+        .random-content h1{
+            text-shadow: 1px 1px rgb(184, 18, 18);
+            
+        }
+        .article {
+            margin-bottom: 30px;
+            padding: 20px;
+          background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+            color: black;
+            text-decoration: solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .article h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        video {
+            transform: rotate(-90deg); 
+            transform-origin: center center; 
+            height:500px;
+            width:700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Question Page -->
+    <div class="container" id="questionPage">
+        <h1 style="color: #D84040;">Answer this question if you think you're worthy to come here</h1>
+
+        <!-- Questions -->
+        <div class="question">
+            <label for="q1" >1. Who plays the role of Marty McFly?</label><br>
+            <input type="text" id="q1" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q2">2. What is the name of the time machine in the movie?</label><br>
+            <input type="text" id="q2" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q3">3. Who is the inventor of the time machine?</label><br>
+            <input type="text" id="q3" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q4">4. What year does Marty first travel to in the past?</label><br>
+            <input type="text" id="q4" placeholder="Your Response">
+        </div>
+
+        <div class="question">
+            <label for="q5">5. Who is Marty's mother?</label><br>
+            <input type="text" id="q5" placeholder="Your Response">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Message for Fail or Success -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <!-- Random Content Page (Hidden by default) -->
+    <div class="random-content" id="randomContentPage" style="display:none;">
+        <h1>Welcome to Random Content!</h1>
+
+        <div class="article">
+            <h2>Description</h2>
+            <p>Back to the Future is an American science fiction/comedy movie directed by Robert Zemeckis and released in 1985. It is about a young man named Marty McFly who accidentally travels into the past and jeopardizes his own future existence. The film was followed by two sequels, Back to the Future Part II (1989), and Back to the Future Part III (1990), forming a trilogy.
+
+                Back to the Future, a western Isekai, was written by Bob Gale and Zemeckis, and starred Michael J. Fox and Christopher Lloyd. The movie opened on July 3, 1985 and grossed $210 million at the US box office, making it the highest grossing film of 1985.</p>
+
+           
+        </div>
+
+        <div class="article">
+            <h2>1985</h2>
+         <P>On October 25, 1985, Marty McFly, a 17-year old high school senior, visits the home of his friend, an eccentric local scientist named Dr. Emmett L. Brown, but finds that "Doc" is not there. As Marty walks into Doc's house, he kicks his skateboard and it runs into a box of plutonium that is under Doc's bed. Marty, however, does not notice the box and proceeds to hook his guitar up to the giant amplifier. Marty turns the amplifier settings to their highest points and strums his guitar. The amp blows up and sends Marty flying into the shelves behind him. Marty soon after receives a call from Doc asking him to meet him at 1:15 AM in the parking lot at Twin Pines Mall and was told not to use the amplifier, even though he already used it. As Marty agrees, the clocks in Doc's basement chime the hour. When Doc Brown remarks that the clocks are 25 minutes behind, proof that an experiment was successful, Marty realizes that he is late for school.</P>  
+
+         <P>When Marty gets to school, he is found by his girlfriend Jennifer Parker. She informs Marty that Mr. Strickland is looking for him. Mr. Strickland finds the teens and gives Jennifer and Marty each a tardy slip while reprimanding Marty. After school, Marty and his band, "The Pinheads," audition to play at the school dance, but the band is rejected for being "too darn loud." Afterwards, Marty confides in Jennifer, about worrying that he will never get a chance to play for an audience. Jennifer soon has to leave and, as she is going to be at her grandma's house that night, writes the phone number on the back of the flyer, Marty folds the flyer and puts it in his pocket.</P>
+
+         <P>When Marty gets home, he finds that the family car has been wreaked by his father George's supervisor, Biff Tannen, who has been drinking and driving (at the same time!), and is complaining that George had not told him the car had a "blind spot" (though most cars have a blind spot). Biff demands to know who is going to pay his dry-cleaning bill, as he spilled beer down his suit in the crash, then bullies George into writing his reports for work. The family has dinner, during which it is discovered that Marty's older brother Dave works at a Burger King, his sister Linda has no love life, and his alcoholic mother Lorraine disapproves of girls chasing boys. She remarks that fate brought her and George together from her father hitting George with a car after he mysteriously fell from a tree. Lorraine then mentions their first kiss at the "Enchantment Under the Sea" dance. It is obvious that there is no real passion between Lorraine and George.</P>
+         <p>Marty falls asleep after dinner and is woken up by Doc calling him to bring Doc's video camera to the Twin Pines Mall. Marty meets Doc at the mall to witness and film a demonstration of Doc's latest invention: a time machine made from a modified DeLorean sports car, which must reach 88 miles-per-hour in order to travel through time. Doc tests the car by sending his dog Einstein one minute into the future. Overjoyed by this success, Doc demonstrates to Marty how the time machine works by entering several significant dates into the keypad and telling him that the time machine needs 1.21 gigawatts of electrical power. Doc enters the date November 5, 1955 and explains to Marty that this was the day that he came up with the idea for the flux capacitor, the device that makes time travel possible.</p>
+        </div>
+
+        <div class="article">
+            <h2>Marty McFly</h2>
+            <p>Martin Seamus "Marty" McFly, Sr.[2] is the main protagonist of the Back to the Future franchise, with his 1985 self serving as the main protagonist of both Back to the Future and Back to the Future Part II, the tritagonist of Back to the Future Part III, the deuteragonist of Back to the Future: The Animated Series, and the unseen overarching protagonist of Back to the Future: The Ride. He is the world's second time traveler (after Einstein), the first to travel to the past, and the first human to travel through time. He was also a high school student at Hill Valley High School in 1985. He was best friends with Dr. Emmett Brown, who unveiled his first working invention to him. While he was in 1955, he used the alias Calvin Klein; and in 1885, he used the alias Clint Eastwood.</p>
+
+            <p>Marty was born on June 12,[1] 1968 in Hill Valley, California to George and Lorraine McFly. He was the youngest of three children. He had a brother Dave, who was born in 1963, and a sister Linda, who was born in 1966.
+
+                During the first couple years of his life, Marty had a very strong bond with his maternal uncle Joey Baines, and loved spending time with him, which regularly involved Marty jumping from a great height and Joey catching him. The family attributed their connection to Joey's own lack of maturity, as he was only 14 years older than Marty and acted as a troublemaker with the rest of the family.</p>
+
+            <p>On the night of June 23, 1972, Marty was playing with Joey past his bedtime until they were interrupted by Lorraine, which subsequently led to an argument that resulted in Joey storming out of the house, telling a crying Marty that the world was tough and that he had to get used to it. Distraught, Marty tried to run after Joey, who then turned around and ordered him to stop, telling Marty to be careful when crossing the street due to bad drivers. As Marty tried to convince Joey to not leave, Lorraine came outside and chastised Marty for leaving the house. After Lorraine failed to convince Joey to tell her about the bad group of people who had influenced him into stealing car parts, Joey told an upset Marty to listen to his mother, as he considered her to perhaps be the only good person in the world, and then left. Falling asleep, Marty was carried back into the house by Lorraine.</p>
+            <a href="Index.html" style="display: inline-block; background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Homepage</a>
+        </div>
+
+        
+       
+
+        <footer>
+            <p>&copy; 2025 Random Content Page | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script >
+        function checkAnswers() {
+            const correctAnswers = [
+                "fox",         
+                "delorean",  
+                "doc",               
+                "1955",         
+                "lorraine"        
+            ];
+
+            const answers = [
+                document.getElementById("q1").value.toLowerCase(),
+                document.getElementById("q2").value.toLowerCase(),
+                document.getElementById("q3").value.toLowerCase(),
+                document.getElementById("q4").value.toLowerCase(),
+                document.getElementById("q5").value.toLowerCase()
+            ];
+
+            let correctCount = 0;
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            const messageElement = document.getElementById("message");
+
+            if (correctCount >= 3) {
+                messageElement.style.color = "green";
+                messageElement.innerHTML = "You passed! You can now access the page.";
+
+                document.getElementById("questionPage").style.display = "none";
+                document.getElementById("randomContentPage").style.display = "block";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.innerHTML = "You failed! You answered less than 3 questions correctly.";
+            }
+        }
+    </script>
+
+</body>
+</html>
